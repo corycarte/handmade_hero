@@ -1,5 +1,5 @@
 @echo off
 
-%~dp0..\out\main.exe
+%~dp0..\out\handmade_win32.exe
 
 @echo on
