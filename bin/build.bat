@@ -3,7 +3,7 @@ echo Starting build...
 
 set BUILD_DIR=%~dp0\..\out
 
-if not exist %BUILD_DIR% mkdir %BUILD_DIR
+if not exist %BUILD_DIR% mkdir %BUILD_DIR%
 
 pushd %~dp0\..\out
 set WINMAIN_TARGET=handmade_win32.cpp

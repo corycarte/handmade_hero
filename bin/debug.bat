@@ -1,5 +1,6 @@
 @echo off
 
+call ~dp0\build.bat
 @REM set output directory
 set BUILD_DIR=%~dp0..\out
 set DEBUG_TARGET=handmade_win32.exe
