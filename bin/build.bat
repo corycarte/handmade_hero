@@ -12,7 +12,7 @@ set LIBRARIES=user32.lib Gdi32.lib
 @REM Build with various flags
 @REM   -Zi: Generate complete debug information.
 
-cl -Zi ..\src\%WINMAIN_TARGET% %LIBRARIES%
+cl -FC -Zi ..\src\%WINMAIN_TARGET% %LIBRARIES%
 
 if %ERRORLEVEL% == 0 ( 
     goto SUCCESS
