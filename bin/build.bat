@@ -7,12 +7,12 @@ if not exist %BUILD_DIR% mkdir %BUILD_DIR%
 
 pushd %~dp0\..\out
 set WINMAIN_TARGET=handmade_win32.cpp
-set LIBRARIES=user32.lib Gdi32.lib
-
+set LIBRARIES=user32.lib Gdi32.lib 
+set FLAGS=-FC -Zi /std:c++17
 @REM Build with various flags
 @REM   -Zi: Generate complete debug information.
 
-cl -FC -Zi ..\src\%WINMAIN_TARGET% %LIBRARIES%
+cl %FLAGS% ..\src\%WINMAIN_TARGET% %LIBRARIES%
 
 if %ERRORLEVEL% == 0 ( 
     goto SUCCESS
